@@ -11,5 +11,5 @@ import Primcipal from './componentes/primcipal'
 createRoot(document.getElementById('root')).render(
   <StrictMode>
     <Primcipal />
-  </StrictMode>,
+  </StrictMode>
 )
