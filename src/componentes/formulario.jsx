@@ -1,3 +1,6 @@
+//Componentes
+import FormularioFinal from "./formularioFinal"
+
 export default function Formulario (){
     return(
         <>
@@ -19,7 +22,7 @@ export default function Formulario (){
             </form>
         </div>
         <h2 className="m-2 bg-blue-200 text-3xl font-bold underline ">El elemento &lt;form &gt; </h2>
-                <p className="m-4">Este es un elemento contenedor para diferentes tipos de elementos de antrada, tales como: Campos de texto, Chetboxes, Botones radius, Botonoes de emvio, ETC</p>
+                <p className="m-4">Este es un elemento contenedor para diferentes tipos de elementos de antrada, tales como: Campos de texto, Chetboxes, Botones radius, Botonoes de envio, ETC</p>
                 <h2 className="m-2 bg-blue-200 text-3xl font-bold underline ">El elemento &lt;input&gt;</h2>
                 <p className="m-4">Este elemento es el mas utilizado en un formulario. Puede mostrarse de diversas maneras dependiendo de su atributo type</p>
                 <table className="m-4 border-2 border-blue-400 ">
@@ -81,11 +84,10 @@ export default function Formulario (){
                         <input type="checkbox" id="vehiculo3" name="vehiculo3" value="bicicleta" className="m-2 p-2"></input>
                         <label for="vehiculo3">Tengo una bicicleta</label>
                     </div>
-                    <div>
-                        
-                    </div>
                 </div>
                 </div>
+        <FormularioFinal></FormularioFinal>
         </>
+    
     )
 }

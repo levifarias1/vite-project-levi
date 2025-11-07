@@ -75,6 +75,11 @@ export default function Objetos (){
             <h3>Mostrando las propiedades</h3>
             <p>Para mostar los valores de las propiedades de nuestros objetos podemos utilizar el metodo docment.getElementById("") </p>
             <p id="imformacion"></p>
+
+            <>
+                <h2>Inicio</h2>
+                <a href="./formulario" className="bg-blue-500">Link a clase formulario</a>    
+            </>
             
         </div>
         </div>

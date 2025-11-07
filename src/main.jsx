@@ -14,6 +14,8 @@ import Header from './componentes/header'
 import Pie from './componentes/pie'
 import Formulario from './componentes/formulario'
 import Pruebas from './componentes/pruebas'
+import FormularioFinal from './componentes/formularioFinal'
+import Hooks from './componentes/hooks'
 
 const router = createBrowserRouter ([
     { path: '/', Component: Objetos },
@@ -22,6 +24,8 @@ const router = createBrowserRouter ([
 
     { path: '/pruebas', Component: Pruebas},
       
+    { path: '/hooks', Component: Hooks},
+
     ]);
 
 
