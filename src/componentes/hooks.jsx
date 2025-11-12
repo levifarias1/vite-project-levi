@@ -1,8 +1,9 @@
-import { useState } from "react";
+//import { useState } from "react";
 
 
 //componente 
-import FuncionUsestate from "./usestate";
+//import FuncionUsestate from "./usestate";
+//import Useefect from "./useefect";
 
 export default function Hooks (){
 
@@ -32,6 +33,7 @@ export default function Hooks (){
         <p>useRef: Permite crear referencias mutables que persisten durante todo el ciclo de vida del componente.
         </p>
         <FuncionUsestate />
+        <Useefect />
         
         </div>
 

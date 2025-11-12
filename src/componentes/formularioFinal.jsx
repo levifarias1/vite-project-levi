@@ -1,5 +1,5 @@
 //Componentes
-import Formulario from "./formulario"
+
 
 export default function FormularioFinal (){
 

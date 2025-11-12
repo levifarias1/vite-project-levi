@@ -1,5 +1,10 @@
 //Componentes
 import FormularioFinal from "./formularioFinal"
+import Hooks from "./hooks"
+import Useefect from "./useefect"
+
+
+
 
 export default function Formulario (){
     return(
@@ -87,6 +92,8 @@ export default function Formulario (){
                 </div>
                 </div>
         <FormularioFinal></FormularioFinal>
+        
+        <Useefect></Useefect>
         </>
     
     )
