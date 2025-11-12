@@ -6,7 +6,7 @@ export default function Useefect (){
 
     useEffect(() => {
         setTimeout(() => {
-            setCuenta(cuenta => cuenta + 10000000000000);
+            setCuenta(cuenta => cuenta + 8);
         }, 1000);
     },[])
     //Ejemplos de use efect
@@ -22,6 +22,13 @@ export default function Useefect (){
         //Corre en el primer render, 
         // y cada ves que el valor de propstate cambie
     },[propiedades, estados]);
+    //Ejemplo practico
+    const [cuentados, setCuentados] = useState(0);
+    const [calculo, setCalculo] = useState (0);
+    
+    useEffect(() =>{
+        setCalculo(cuentados * 2);
+    }, [cuentados]);
 
 
     return(
@@ -43,9 +50,11 @@ export default function Useefect (){
         <p>Esto no es lo que qieriamos, hay varias maneras de controlar cuando corres este side efect. </p>
         <p>deveriammos seimrpre incluir el segundo  parametro que acepta un array. Opcionalmente podriamos pasar dependencias al use efect de esta manera</p>
         <h3>Ejemplos En El Codigo</h3>
-        <code>
+        <h3>Ejempl Practico</h3>
+        <p>Cuenta: {cuentados}</p>
+        <button onClick={() => setCuentados(cuentados + 1)}>Aumentar</button>
+        <p>Calculo (Cuenta * 2) = {calculo}</p>
 
-        </code>
 
         </div>
     )
