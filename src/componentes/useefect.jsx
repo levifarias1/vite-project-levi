@@ -25,7 +25,7 @@ export default function Useefect (){
 
 
     return(
-        <div className="contenido {&>p}: m-4 {&>h2}: text-2xl font-bold {&>h3}: text-xl font-semibold space-y-2 ">
+        <div className="contenido">
 
         <h2>Hook useEffect</h2>
         <p>El hook useEffect en React permite a los componentes funcionales realizar efectos secundarios, como llamadas a API, suscripciones a eventos o manipulaciones del DOM. </p>

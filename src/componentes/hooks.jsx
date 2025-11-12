@@ -9,7 +9,7 @@ export default function Hooks (){
 
     const [nombre, setNombre] = useState ("Levi");
     return(
-        <div className="contenido {&>p}: m-4 {&>h2}: text-2xl font-bold {&>h3}: text-xl font-semibold space-y-2 ">
+        <div className="contenido: text-xl font-semibold space-y-2 ">
 
         <h2>Titulo</h2>
         <p>los ganchoa permiten a os componentes funcionales acceder a al etado y a otra propiedades sin la itulizacion de clases. <br></br> Proven una api mas directa a conceptos de reac como proops, states, context entre otros. </p>
