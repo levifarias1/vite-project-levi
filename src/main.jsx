@@ -21,22 +21,23 @@ function Cabecera(){
 }
 
 function Contenido() {
-  const [campoNombre, setCampoNombre] = useState(0);
-  const [numero1, setNumero1] = useState(0);
-  const [numero2, setNumero2] = useState(0);
+    const [campoNombre, setCampoNombre] = useState(0);
+    const [numero1, setNumero1] = useState(0);
+    const [numero2, setNumero2] = useState(0);
+}
 
 
-  const gestionaCambio = (event) => {
+    const gestionaCambio = (event) => {
+const gestionaCambio = (event) => {
     const { name, value } = event.target;
 
     if (name === "campoNombre") setCampoNombre(value);
     if (name === "numero1") setNumero1(value);
     if (name === "numero2") setNumero2(value);
-  };
-  const {funcioSUmar = (nu1, n2) => nu1 + n2
+    };
 
-  }
-    
+  // 💡 Corrección: Definición de función flecha normal
+  const funcioSUmar = (nu1, n2) => nu1 + n2;
   return (
     <div>
         <h2>Funciones en JS</h2>
