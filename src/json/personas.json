@@ -1,0 +1,29 @@
+[
+    {
+        "nombre" :"Marcelo Tinelli",
+        "mail" : "tinelli@hfdsj",
+        "curso" : "Programacion",
+        "nota" : "5"
+    },
+    {
+
+        "nombre" :"Mirta",
+        "mail" : "fdse@hfdsj",
+        "curso" : "Programacion",
+        "nota" : "5"
+    },
+    {
+
+        "nombre" :"Ricardo ford",
+        "mail" : "fgji44@hfdsj",
+        "curso" : "Manejo",
+        "nota" : "9"
+    },
+    {
+        "nombre" :"Pepe Ergento",
+        "mail" : "pepeargento@",
+        "curso" : "Actor",
+        "nota" : "8"
+    }
+
+]
