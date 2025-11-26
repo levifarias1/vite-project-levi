@@ -1,0 +1,31 @@
+[
+    {
+        "titulo": "Linux vs Windows",
+        "duracion": "3hs",
+        "genero": "drama, suspenso, terror, comedia",
+        "calificacion": "+16",
+        "imagen": "src/imagenes/goofy-tux-against-windows-logo-linux-desktop-graphic-art-yfiyy496m4qo74yr.webp"
+
+    },
+    {
+        "titulo": "Los juegos de nitendo son carisimos",
+        "duracion": "1hs",
+        "genero": "drama, suspenso, terror, comedia",
+        "calificacion": "+21",
+        "imagen": "src/imagenes/Nintendo-Entertainment-System-NES-Console-BR.webp"
+    },
+    {
+        "titulo": "La isla siniestra",
+        "duracion": "1hs",
+        "genero": "drama, suspenso,",
+        "calificacion": "+16",
+        "imagen": "src/imagenes/peliculas-de-suspense-social.jpg"
+    },
+    {
+        "titulo": "Los juegos de nitendo son carisimos",
+        "duracion": "1hs",
+        "genero": "drama, suspenso, terror, comedia",
+        "calificacion": "+21",
+        "imagen": "src/imagenes/Nintendo-Entertainment-System-NES-Console-BR.webp"
+    }
+]
