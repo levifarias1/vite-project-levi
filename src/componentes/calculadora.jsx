@@ -3,7 +3,7 @@ import { useState, useEffect } from "react";
 export default function CalculadoraDolar() {
   /**
    * pesos → lo que el usuario escribe en el input
-   * tasa → la tasa del dólar que trae la API
+   * tasa → la tasa del dólar que trae la API (cuántos pesos cuesta 1 USD)
    * loading → indica si la API todavía se está cargando
    */
   const [pesos, setPesos] = useState("");
@@ -21,12 +21,12 @@ export default function CalculadoraDolar() {
     const fetchTasa = async () => {
       try {
         /**
-         * Hacemos un fetch a la API gratuita:
-         *    https://open.er-api.com/v6/latest/ARS
-         * Esta API devuelve un JSON con muchas divisas.
-         * En nuestro caso queremos ARS → USD.
+         * Usamos una API estable que devuelve el dólar oficial en Argentina:
+         *    https://dolarapi.com/v1/dolares/oficial
+         * Esta API devuelve un JSON con "compra" y "venta".
+         * En nuestro caso usamos "venta" (precio al que se compra el dólar).
          */
-        const res = await fetch("https://open.er-api.com/v6/latest/ARS");
+        const res = await fetch("https://dolarapi.com/v1/dolares/oficial");
 
         // Convertimos la respuesta a un objeto JSON.
         const data = await res.json();
@@ -34,10 +34,10 @@ export default function CalculadoraDolar() {
         /**
          * Si la API respondió correctamente,
          * guardamos la tasa del dólar:
-         *    data.rates.USD
+         *    data.venta = pesos por 1 USD
          */
-        if (data.result === "success") {
-          setTasa(data.rates.USD);
+        if (data.venta) {
+          setTasa(data.venta);
         }
       } catch (error) {
         /**
@@ -64,15 +64,17 @@ export default function CalculadoraDolar() {
    * Función para convertir los pesos a dólares.
    * Si todavía no hay tasa o el usuario no escribió un número,
    * siempre devolvemos 0.00 para evitar errores.
+   *
+   * IMPORTANTE:
+   *   Antes usábamos "pesos * tasa" porque la API daba ARS → USD.
+   *   Ahora la API da PESOS POR 1 USD, entonces:
+   *
+   *        dólares = pesos / tasa
    */
   const convertir = () => {
     if (!pesos || isNaN(pesos) || tasa === null) return "0.00";
 
-    /**
-     * Fórmula simple:
-     *    pesos * tasa = dólares
-     */
-    return (pesos * tasa).toFixed(2); // Redondeamos a 2 decimales.
+    return (pesos / tasa).toFixed(2); // Redondeamos a 2 decimales.
   };
 
 

@@ -8,22 +8,24 @@ import { createBrowserRouter, RouterProvider } from "react-router";
 import "./CSS/general.css";
 import HeaderNav from "./componentes/headernap";
 import contenidoDinamico from "./componentes/contenidoDinamico";
+import snipers from "./componentes/snipers";
 
 
 const rutasObjetos = createBrowserRouter([
-    {
-        path: "/",
+    
+    
+    { path: "/",
         element: <h1>Hola mundo</h1>
     },
-    {
-        path: "/contenidoDinamico",
-        Component : contenidoDinamico
-    }
+    { path: "/contenidoDinamico", Component : contenidoDinamico}
+    ,
+    {path: "/snipers", Component: snipers}
 ]);
 
-createRoot(document.getElementById("root")).render(
-    <StrictMode>
-        <RouterProvider router={rutasObjetos} />
-        <HeaderNav></HeaderNav>
-    </StrictMode>
-);
+createRoot(document.getElementById('root')).render(
+<StrictMode>
+    <Header />
+    <RouterProvider router = {router} />
+    <Pie />
+</StrictMode>
+)

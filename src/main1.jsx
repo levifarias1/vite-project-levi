@@ -21,6 +21,7 @@ import Calendario from './componentes/calendario'
 import CalculadoraDolar from './componentes/calculadora'
 import ConversorMoneda from './componentes/conversorMoneda'
 
+
 const router = createBrowserRouter ([
     { path: '/', Component: Objetos },
     
@@ -35,6 +36,7 @@ const router = createBrowserRouter ([
     { path: '/calculadora', Component: CalculadoraDolar}, 
 
     {path: '/conversor', Component: ConversorMoneda},
+
 
     ]);
 
